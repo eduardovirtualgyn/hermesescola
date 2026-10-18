@@ -539,5 +539,6 @@ VOLUME [ "/opt/data" ]
 # supervised PID-1 path and the non-PID-1 fallback path. Without the
 # wrapper-as-ENTRYPOINT, leading-dash args like `--version` would be
 # intercepted by /init's POSIX shell.
+EXPOSE 9119
 ENTRYPOINT [ "/opt/hermes/docker/entrypoint-dispatch.sh" ]
-CMD [ ]
+CMD [ "dashboard", "--host", "0.0.0.0", "--port", "9119", "--no-open" ]

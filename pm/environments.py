@@ -446,6 +446,8 @@ def _require_own_dependencies(project_root: Path) -> None:
 
     if sys.prefix != sys.base_prefix:
         return  # a venv interpreter (developer .venv, test env) carries its own packages
+    if (project_root / ".install_method").is_file() and (project_root / ".install_method").read_text(encoding="utf-8").strip() == "docker":
+        return  # docker image ships sealed venv dependencies pre-baked
     if Path(sys.base_prefix).resolve().is_relative_to(store_root(project_root).resolve()):
         raise NoCommittedEnvironment("no dependency environment is committed for this install")
 

@@ -491,7 +491,9 @@ def _spawn_hermes_action(
         _atomic_bytes(_ACTION_LOG_DIR / f"{name}.action_id", action_id.encode("ascii"))
 
     from hermes_cli._launchers import runtime_command
-    cmd = runtime_command(PROJECT_ROOT, subcommand)
+    venv_python = (PROJECT_ROOT / ".venv" / "bin" / "python")
+    python_bin = venv_python if venv_python.is_file() else os.environ.get("HERMES_PYTHON")
+    cmd = runtime_command(PROJECT_ROOT, subcommand, python=python_bin)
     if _action_targets_system_gateway(subcommand):
         # A system-scope lifecycle verb spawned as the dashboard's own user can only ever write
         # "System gateway <verb> requires root" into this log, so the button never worked on a

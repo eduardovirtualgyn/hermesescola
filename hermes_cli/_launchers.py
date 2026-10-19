@@ -45,7 +45,13 @@ def runtime_command(repo_root: Path, args=(), *, module: str = "hermes_cli.main"
     No selected generation or ambient PYTHONPATH is captured in the command.
     """
     root = Path(repo_root).resolve()
-    python = python or resolve_store_python(root) or Path(sys.executable)
+    if python is None:
+        venv_py = root / ".venv" / ("Scripts/python.exe" if os.name == "nt" else "bin/python")
+        python = (
+            resolve_store_python(root)
+            or (venv_py if venv_py.is_file() else None)
+            or Path(sys.executable)
+        )
     entry = f"exec({_inline_string_literal(code)})" if code is not None else (
         f"runpy.run_module({_inline_string_literal(module)}, run_name='__main__', alter_sys=True)")
     # A literal home is pinned up front; the default one needs ``hermes_constants`` from the

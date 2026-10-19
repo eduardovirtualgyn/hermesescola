@@ -485,6 +485,8 @@ def activate_dependencies(project_root: Path) -> None:
         # Sealed payloads still select once, before imports.
         # Never consult VIRTUAL_ENV: it can describe the invoking shell's Python.
         environment = payload_venv(project_root)
+        if environment is None and (project_root / ".venv").is_dir():
+            environment = project_root / ".venv"
         if environment is None:
             return _require_own_dependencies(project_root)
         selected = site_packages(environment)

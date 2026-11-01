@@ -63,6 +63,13 @@ Este catálogo registra os documentos institucionais, normativos, técnicos e op
 ---
 
 ### 7. Dados, Sistemas e Tecnologia (`conhecimentos/dados/` e `conhecimentos/tecnologia/`)
+
+#### Documentos e Relatórios Técnicos
+| Identificador | Título do Documento | Origem | Status | Descrição |
+| :--- | :--- | :--- | :--- | :--- |
+| `DOC-DAD-001` | Relatório Técnico Integrado dos 5 Portais | Institucional / Fábrica | Integrado (2026) | Diagnóstico completo, parâmetros de acesso, arquitetura, módulos e calendário unificado (GEMUL, Bem Comum, CNCA, SIAM e SAEGO). |
+
+#### Sistemas e Portais Integrados
 | Identificador | Sistema / Portal | URL Oficial | Arquitetura | Finalidade na Escola |
 | :--- | :--- | :--- | :--- | :--- |
 | `SYS-001` | **GEMUL Aparecida** | `https://gemul-aparecida.com.br/login/index.asp` | ASP Clássico (Form POST + Seleção de Unidade) | [Autenticado e Integrado] Matrículas, turmas, notas, faltas, modulação e planejamento. |

@@ -32,6 +32,7 @@ Este catálogo registra os documentos institucionais, normativos, técnicos e op
 | `DOC-PED-003` | Resultados SAEGO / CAEd | CAEd / SME | Análise Periódica | Diagnóstico de proficiência em Língua Portuguesa e Matemática. |
 | `DOC-PED-004` | Diagnóstico e Mapeamento: Plataforma Bem Comum (PARC/CAEd) | CAEd / Bem Comum | Integrado (2026) | Mapeamento dos instrumentos de Fluência em Leitura e Avaliação Oral de Matemática da E.M. Senador Albino G. Boaventura. |
 | `DOC-PED-005` | Diagnóstico e Mapeamento: Portal CNCA (Compromisso Criança Alfabetizada) | MEC / CAEd | Mapeado (2026) | Integração com Gov.br SSO e espelhamento de dados com a plataforma Bem Comum. |
+| `DOC-PED-006` | Diagnóstico e Calendário Oficial: SIAM / AlfaMais Goiás | SEDUC-GO | Integrado (2026) | Calendário operacional das avaliações de fluência leitora e acompanhamento da aprendizagem da E.M. Senador Albino G. Boaventura. |
 
 ---
 
@@ -67,6 +68,6 @@ Este catálogo registra os documentos institucionais, normativos, técnicos e op
 | `SYS-002` | **CNCA (CAEd Digital)** | `https://criancaalfabetizada.caeddigital.net/#!/login` | CAEd SPA (Gov.br SSO) | [Mapeado] Alfabetização e letramento infantil (1º e 2º anos). |
 | `SYS-003` | **SAEGO (CAEd Digital)** | `https://avaliacaoemonitoramentogoias.caeddigital.net/#!/login` | CAEd SPA (Avaliação) | Diagnóstico e proficiências em Língua Portuguesa e Matemática. |
 | `SYS-004` | **Bem Comum / PARC** | `https://bemcomum.caeddigital.net/` | CAEd SPA (AngularJS) | [Autenticado e Integrado] Avaliação da fluência em leitura e matemática oral. |
-| `SYS-005` | **SIAM SEDUC-GO** | `https://siam.educacao.go.gov.br/login` | Vite SPA (Modern Web) | Administração integrada e recursos humanos. |
+| `SYS-005` | **SIAM SEDUC-GO** | `https://siam.educacao.go.gov.br/login` | Vite SPA / REST API (SEDUC-GO) | [Autenticado e Integrado] Programa AlfaMais Goiás, calendário de avaliações e acompanhamento. |
 | `SYS-006` | **Scrapling Crawler Suite** | `agentes/tecnologia-automacao/portal_crawler.py` | Python / Scrapling | Motor unificado de extração, login e parsing tabular dos 5 portais. |
 | `SYS-007` | **Extrator CAEd / Bem Comum** | `agentes/tecnologia-automacao/crawler_caed.py` | Playwright / Headless | Módulo de autenticação, captura de tokens JWT e raspagem dos relatórios PARC. |

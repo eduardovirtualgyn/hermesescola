@@ -58,10 +58,11 @@ Este catálogo registra os documentos institucionais, normativos, técnicos e op
 ---
 
 ### 7. Dados, Sistemas e Tecnologia (`conhecimentos/dados/` e `conhecimentos/tecnologia/`)
-| Identificador | Sistema | Órgão Mantenedor | Finalidade Principal |
-| :--- | :--- | :--- | :--- |
-| `SYS-001` | GEMUL | SME Aparecida | Gestão de matrículas, turmas, notas e frequência escolar. |
-| `SYS-002` | SIAM | SME Aparecida | Sistema integrado de administração municipal e quadro funcional. |
-| `SYS-003` | CAEd / SAEGO | CAEd / SEDUC-GO | Resultados nominais e agregados de avaliações diagnósticas e somativas. |
-| `SYS-004` | n8n / MCP / Hermes | Fábrica de Agentes | Plataformas locais de orquestração, automação e integração técnica. |
-| `SYS-005` | Scrapling (D4Vinci) | Fábrica de Agentes | Web scraper furtivo e adaptativo para extração no GEMUL, SIAM e CNCA. |
+| Identificador | Sistema / Portal | URL Oficial | Arquitetura | Finalidade na Escola |
+| :--- | :--- | :--- | :--- | :--- |
+| `SYS-001` | **GEMUL Aparecida** | `https://gemul-aparecida.com.br/login/index.asp` | ASP Clássico (Form POST) | Matrículas, turmas, notas, faltas e movimentação. |
+| `SYS-002` | **CNCA (CAEd Digital)** | `https://criancaalfabetizada.caeddigital.net/#!/login` | CAEd SPA (AngularJS) | Alfabetização e letramento (1º e 2º anos). |
+| `SYS-003` | **SAEGO (CAEd Digital)** | `https://avaliacaoemonitoramentogoias.caeddigital.net/#!/login` | CAEd SPA (Avaliação) | Diagnóstico e proficiências em Língua Portuguesa e Matemática. |
+| `SYS-004` | **Bem Comum / PARC** | `https://bemcomum.caeddigital.net/` | CAEd SPA (Parcerias) | Avaliação diagnóstica em Regime de Colaboração. |
+| `SYS-005` | **SIAM SEDUC-GO** | `https://siam.educacao.go.gov.br/login` | Vite SPA (Modern Web) | Administração integrada e recursos humanos. |
+| `SYS-006` | **Scrapling Crawler Suite** | `agentes/tecnologia-automacao/portal_crawler.py` | Python / Scrapling | Motor unificado de extração, login e parsing tabular dos 5 portais. |

@@ -1,0 +1,55 @@
+[
+  {
+    "portal": "gemul",
+    "nome": "GEMUL (Aparecida de Goiânia)",
+    "status": "online",
+    "http_code": 200,
+    "url": "https://gemul-aparecida.com.br/login/index.asp",
+    "title": "Login – GEMUL - Sistema de Gestão Educacional",
+    "tipo": "ASP Clássico"
+  },
+  {
+    "portal": "cnca",
+    "nome": "Criança Alfabetizada - CNCA (CAEd Digital)",
+    "status": "online",
+    "http_code": 200,
+    "url": "https://criancaalfabetizada.caeddigital.net/#!/login",
+    "title": "Criança Alfabetizada - Compromisso Nacional",
+    "tipo": "caed_spa",
+    "arquitetura": "SPA (Single Page App - renderizavel via DynamicFetcher)",
+    "scripts_detectados": 15
+  },
+  {
+    "portal": "saego",
+    "nome": "SAEGO (Avaliação e Monitoramento CAEd / Goiás)",
+    "status": "online",
+    "http_code": 200,
+    "url": "https://avaliacaoemonitoramentogoias.caeddigital.net/#!/login",
+    "title": "Sistema de Avaliação Educacional do Estado de Goiás",
+    "tipo": "caed_spa",
+    "arquitetura": "SPA (Single Page App - renderizavel via DynamicFetcher)",
+    "scripts_detectados": 13
+  },
+  {
+    "portal": "bemcomum",
+    "nome": "Associação Bem Comum / PARC (CAEd Digital)",
+    "status": "online",
+    "http_code": 200,
+    "url": "https://bemcomum.caeddigital.net/",
+    "title": "Plataforma PARC",
+    "tipo": "caed_spa",
+    "arquitetura": "SPA (Single Page App - renderizavel via DynamicFetcher)",
+    "scripts_detectados": 13
+  },
+  {
+    "portal": "siam",
+    "nome": "SIAM Educação (SEDUC-GO)",
+    "status": "online",
+    "http_code": 200,
+    "url": "https://siam.educacao.go.gov.br/login",
+    "title": "Siam Educação",
+    "tipo": "vite_spa",
+    "arquitetura": "SPA (Single Page App - renderizavel via DynamicFetcher)",
+    "scripts_detectados": 2
+  }
+]

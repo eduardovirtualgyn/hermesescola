@@ -23,16 +23,20 @@ version: 1.0.0
 - **Python / Scripts:** Limpeza e consolidação de planilhas de notas, frequência e formulários.
 - **Selenium / RPA Controlado:** Automação de consultas burocráticas autorizadas (sempre com aprovação humana).
 
-### Como Operar o Scrapling no GEMUL/SIAM:
+### Operação do Scrapling nos 5 Portais Educacionais:
 ```bash
-# 1. Testar conexão com o portal GEMUL:
+# Diagnóstico completo de conectividade dos 5 portais (GEMUL, CNCA, SAEGO, Bem Comum, SIAM):
+python agentes/tecnologia-automacao/portal_crawler.py --portal all --output relatorios/diagnostico_portais.json
+
+# Teste individual de um portal específico:
+python agentes/tecnologia-automacao/portal_crawler.py --portal cnca --test
+python agentes/tecnologia-automacao/portal_crawler.py --portal saego --test
+python agentes/tecnologia-automacao/portal_crawler.py --portal siam --test
 python agentes/tecnologia-automacao/portal_crawler.py --portal gemul --test
 
-# 2. Testar autenticação com credenciais salvas no .env:
-python agentes/tecnologia-automacao/portal_crawler.py --portal gemul --login
-
-# 3. Extrair dados de página ou relatório e salvar em JSON estruturado:
-python agentes/tecnologia-automacao/portal_crawler.py --portal gemul --fetch "/caminho/relatorio.asp" --output relatorios/gemul_dados.json
+# Extração de dados tabulares (turmas, notas, avaliações):
+python agentes/tecnologia-automacao/portal_crawler.py --portal gemul --fetch "/gemul/relatorios/turmas.asp" --output relatorios/turmas.json
+python agentes/tecnologia-automacao/portal_crawler.py --portal cnca --fetch "https://criancaalfabetizada.caeddigital.net/#!/relatorio" --output relatorios/cnca.json
 ```
 
 ---

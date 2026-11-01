@@ -16,11 +16,24 @@ version: 1.0.0
 ---
 
 ## Escopo Tecnológico
+- **Scrapling (D4Vinci) & Web Crawling:** Extração inteligente e camuflada de portais institucionais (GEMUL, SIAM, CNCA, CAEd) utilizando o script em `agentes/tecnologia-automacao/portal_crawler.py`.
 - **Hermes Agent & MCP:** Criação e manutenção de conectores do Model Context Protocol para leitura de bancos e arquivos.
 - **n8n:** Orquestração de webhooks, notificações institucionais e pipelines de dados.
 - **Google Drive:** Estruturação de repositórios em nuvem, permissões por setor e padronização de nomenclatura.
 - **Python / Scripts:** Limpeza e consolidação de planilhas de notas, frequência e formulários.
 - **Selenium / RPA Controlado:** Automação de consultas burocráticas autorizadas (sempre com aprovação humana).
+
+### Como Operar o Scrapling no GEMUL/SIAM:
+```bash
+# 1. Testar conexão com o portal GEMUL:
+python agentes/tecnologia-automacao/portal_crawler.py --portal gemul --test
+
+# 2. Testar autenticação com credenciais salvas no .env:
+python agentes/tecnologia-automacao/portal_crawler.py --portal gemul --login
+
+# 3. Extrair dados de página ou relatório e salvar em JSON estruturado:
+python agentes/tecnologia-automacao/portal_crawler.py --portal gemul --fetch "/caminho/relatorio.asp" --output relatorios/gemul_dados.json
+```
 
 ---
 

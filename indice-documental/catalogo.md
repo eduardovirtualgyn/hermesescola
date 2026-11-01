@@ -64,3 +64,4 @@ Este catálogo registra os documentos institucionais, normativos, técnicos e op
 | `SYS-002` | SIAM | SME Aparecida | Sistema integrado de administração municipal e quadro funcional. |
 | `SYS-003` | CAEd / SAEGO | CAEd / SEDUC-GO | Resultados nominais e agregados de avaliações diagnósticas e somativas. |
 | `SYS-004` | n8n / MCP / Hermes | Fábrica de Agentes | Plataformas locais de orquestração, automação e integração técnica. |
+| `SYS-005` | Scrapling (D4Vinci) | Fábrica de Agentes | Web scraper furtivo e adaptativo para extração no GEMUL, SIAM e CNCA. |

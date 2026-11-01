@@ -16,11 +16,13 @@ version: 1.0.0
 ---
 
 ## Fontes de Dados e Sistemas de Referência
-- **GEMUL:** Sistema de Gestão Escolar Municipal (dados de matrícula, enturmação, histórico, boletins e faltas).
+- **GEMUL:** Sistema de Gestão Escolar Municipal (dados de matrícula, enturmação, histórico, boletins e faltas). Extração automatizada via Scrapling (`agentes/tecnologia-automacao/portal_crawler.py`).
 - **SIAM:** Sistema Integrado da Administração Municipal de Aparecida de Goiânia.
 - **CNCA:** Metas e indicadores do Compromisso Nacional Criança Alfabetizada.
 - **SAEGO / CAEd:** Avaliações diagnósticas e somativas de rede.
 - **Censo Escolar / Educacenso:** Rendimento, movimentação e distorção idade-ano.
+
+> **Integração com Agente 07:** O Agente de Dados solicita ao Agente de Tecnologia extrações periódicas via Scrapling do GEMUL e SIAM para geração de tabelas limpas em `relatorios/` e `conhecimentos/dados/`.
 
 ---
 

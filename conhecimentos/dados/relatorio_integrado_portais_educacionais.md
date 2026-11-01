@@ -98,16 +98,32 @@ flowchart TD
 ### 2.3. CNCA — Compromisso Nacional Criança Alfabetizada
 * **Endereço Oficial:** `https://criancaalfabetizada.caeddigital.net/#!/login`
 * **Órgão Mantenedor:** Ministério da Educação (MEC) / Governo Federal / CAEd Digital
+* **Status no Sistema:** **Autenticado e Integrado (Sessão Ativa Gov.br SSO)**
 * **Identificação Funcional:**
-  * Gestor: `Eduardo Rodrigues Gonçalves` (CPF: `92937934153`)
-  * Provedor de Identidade: `Gov.br SSO` (`https://sso.acesso.gov.br/login`)
-* **Arquitetura Tecnológica e Diagnóstico:**
-  * Plataforma CAEd Digital SPA integrada à federação de identidades Gov.br.
-  * O crawler automatizou com sucesso a transição da landing page para o Gov.br, preenchimento do CPF e submissão.
-  * O motor antifraude do Gov.br impõe desafio visual (*hCaptcha/Arkose puzzle*) em sessões headless não interativas.
-* **Estratégia Operacional da Fábrica:**
-  * Os dados diagnósticos de proficiência do CNCA na escola compartilham a mesma matriz e base do **Portal Bem Comum**, já plenamente integrado.
-  * Disponibilizado o script assistido [executar_login_cnca.py](file:///c:/HERMES%20ESCOLA/agentes/tecnologia-automacao/executar_login_cnca.py) para resolução visual única ou injeção de credenciais de longa duração.
+  * Gestor: `Eduardo Rodrigues Gonçalves` (CPF: `92937934153` / Email: `eduardovirtualgyn@gmail.com`)
+  * Perfis Vinculados:
+    1. `Diretora ou Diretor Escolar` (Código: `1021`) — E.M. Senador Albino Gonçalves Boaventura (`52090604`)
+    2. `Professora ou Professor` (Código: `1072`) — E.M. Senador Albino Gonçalves Boaventura (`52090604`)
+  * Token de Sessão Parse: `r:a470229c94bba896ea3a0ff8913c1e5c` (Chave `225-alfabetizacao.usuario`)
+  * Código do Programa / Rede: `CD_REDE: "3"` | `FL_TEMPO_APRENDER: "1"`
+* **Arquitetura Tecnológica e Extração ao Vivo:**
+  * Plataforma CAEd Digital SPA autenticada com sucesso via **Gov.br SSO** em sessão interativa com extração via Scrapling.
+  * Capturadas 19 chamadas de APIs de backend (`/portal/functions/login`, `getAgregados`, `getObjetosByView`, `CV001`).
+* **Aviso Oficial de Ação Imediata (MEC):**
+  * *"Atenção: Atualize os dados cadastrais dos estudantes com informações de cor ou raça e pertencimento ao público-alvo da educação especial."* (Rota: `/#!/lista-turmas`).
+* **11 Módulos Operacionais Mapeados:**
+  1. **Cronograma (`/#!/cronograma`):** Calendário nacional e prazos de lançamento de notas/respostas.
+  2. **Novidades (`/#!/novidades`):** Informes oficiais e atualizações do MEC.
+  3. **Profissionais (`/#!/profissionais`):** Cadastro de equipes escolares para apoio à alfabetização.
+  4. **Turmas (`/#!/lista-turmas`):** Relação de turmas e auditoria de autodeclaração de raça/cor e educação especial.
+  5. **Avaliações (`/#!/avaliacoes`):** Testes e materiais instrucionais para os 1º e 2º anos.
+  6. **Banco de Itens (`/#!/banco-itens`):** Montagem de cadernos pedagógicos customizados.
+  7. **Resultados (`/#!/resultados`):** Dados de participação e proficiência nas avaliações formativas.
+  8. **Matrizes (`/#!/matrizes`):** Matrizes de habilidades e descritores de competência.
+  9. **Monitoramento (`/#!/monitoramento`):** Indicadores de alcance do programa na unidade.
+  10. **Desenvolvimento Profissional (`/#!/capacitacao`):** Cursos de formação em avaliação educacional.
+  11. **Apoio Pedagógico (`/#!/apoio-pedagogico`):** Roteiros de intervenção e boas práticas de alfabetização.
+* **Automação Hermes:** Script [executar_cnca_ao_vivo.py](file:///c:/HERMES%20ESCOLA/agentes/tecnologia-automacao/executar_cnca_ao_vivo.py) e launcher [abrir_cnca_ao_vivo.bat](file:///c:/HERMES%20ESCOLA/abrir_cnca_ao_vivo.bat).
 
 ---
 
@@ -175,8 +191,8 @@ flowchart TD
 | **Pilha Web** | ASP Clássico (POST) | AngularJS SPA (Parse) | AngularJS SPA (Gov.br) | Vite SPA (Vue/React) | AngularJS SPA (Parse Server) |
 | **Autenticação** | Sessão ASP + ID Escola | Parse Session Token | Gov.br SSO (hCaptcha) | JWT Bearer Token | Parse Session Token |
 | **Identificador Escola** | `240` | `52090604` | `52090604` | `52090604` | `52090604` |
-| **Perfil do Gestor** | Diretor(a) - Matr. 21057 | Diretor(a) Escolar (1021) | CPF Gestor Federal | Diretor Escola (15) | Diretor Escolar (901) |
-| **Status no Hermes** | **Autenticado e Integrado** | **Autenticado e Integrado** | **Mapeado (Espelhado)** | **Autenticado e Integrado** | **Autenticado e Integrado** |
+| **Perfil do Gestor** | Diretor(a) - Matr. 21057 | Diretor(a) Escolar (1021) | Diretor (1021) / Prof (1072) | Diretor Escola (15) | Diretor Escolar (901) |
+| **Status no Hermes** | **Autenticado e Integrado** | **Autenticado e Integrado** | **Autenticado e Integrado** | **Autenticado e Integrado** | **Autenticado e Integrado** |
 
 ---
 

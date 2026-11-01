@@ -39,6 +39,7 @@ Este catálogo registra os documentos institucionais, normativos, técnicos e op
 | :--- | :--- | :--- | :--- | :--- |
 | `DOC-SEC-001` | Manual de Redação Oficial e Protocolos | Institucional | Vigente | Estruturas formais para ofícios, atas, certidões e memorandos. |
 | `DOC-SEC-002` | Instruções Normativas de Matrícula e Censo | SME / MEC | Anual | Critérios de matrícula, transferências e preenchimento no GEMUL. |
+| `DOC-SEC-003` | Diagnóstico e Mapeamento dos 7 Módulos do GEMUL Aparecida | SME Aparecida | Integrado (2026) | Mapeamento dos módulos Acadêmico, Matrícula, Planejamento, RH e Censo da E.M. Senador Albino G. Boaventura. |
 
 ---
 
@@ -61,7 +62,7 @@ Este catálogo registra os documentos institucionais, normativos, técnicos e op
 ### 7. Dados, Sistemas e Tecnologia (`conhecimentos/dados/` e `conhecimentos/tecnologia/`)
 | Identificador | Sistema / Portal | URL Oficial | Arquitetura | Finalidade na Escola |
 | :--- | :--- | :--- | :--- | :--- |
-| `SYS-001` | **GEMUL Aparecida** | `https://gemul-aparecida.com.br/login/index.asp` | ASP Clássico (Form POST) | Matrículas, turmas, notas, faltas e movimentação. |
+| `SYS-001` | **GEMUL Aparecida** | `https://gemul-aparecida.com.br/login/index.asp` | ASP Clássico (Form POST + Seleção de Unidade) | [Autenticado e Integrado] Matrículas, turmas, notas, faltas, modulação e planejamento. |
 | `SYS-002` | **CNCA (CAEd Digital)** | `https://criancaalfabetizada.caeddigital.net/#!/login` | CAEd SPA (AngularJS) | Alfabetização e letramento (1º e 2º anos). |
 | `SYS-003` | **SAEGO (CAEd Digital)** | `https://avaliacaoemonitoramentogoias.caeddigital.net/#!/login` | CAEd SPA (Avaliação) | Diagnóstico e proficiências em Língua Portuguesa e Matemática. |
 | `SYS-004` | **Bem Comum / PARC** | `https://bemcomum.caeddigital.net/` | CAEd SPA (AngularJS) | [Autenticado e Integrado] Avaliação da fluência em leitura e matemática oral. |

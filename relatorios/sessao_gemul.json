@@ -1,0 +1,75 @@
+{
+  "sistema": "GEMUL - Sistema de Gestão Educacional Municipal de Aparecida",
+  "url_painel": "https://gemul-aparecida.com.br/login/selecionar_escola.asp",
+  "titulo": "Painel de Seleção de Escola e Módulos",
+  "usuario": "eduardo.rodrigues",
+  "nome_completo": "EDUARDO RODRIGUES GONÇALVES",
+  "id_usuario": 68,
+  "cargo": "DIRETOR(A) - INTEGRAL",
+  "matricula": "21057",
+  "escola": "ESCOLA MUNICIPAL SENADOR ALBINO G. BOAVENTURA",
+  "comunicado_vigente": "Comunicado SAPE nº. 006/2026 - Lançamento de Conteúdo Programático substituído pelo módulo Planejamento",
+  "modulos": [
+    {
+      "modulo": "Tutoriais",
+      "texto_completo": "Tutoriais",
+      "onclick": "window.location.href='https://GEMUL-APARECIDA.COM.BR/app/tutorial.asp'",
+      "href": null,
+      "class": "module-card"
+    },
+    {
+      "modulo": "Acadêmico",
+      "texto_completo": "Acadêmico",
+      "onclick": "window.location.href='https://GEMUL-APARECIDA.COM.BR/app/academico.asp'",
+      "href": null,
+      "class": "module-card"
+    },
+    {
+      "modulo": "Censo Escolar",
+      "texto_completo": "Censo Escolar",
+      "onclick": "window.location.href='chaveAcesso.asp'",
+      "href": null,
+      "class": "module-card"
+    },
+    {
+      "modulo": "Avap/Atividades",
+      "texto_completo": "Avap/Atividades",
+      "onclick": "window.location.href='https://GEMUL-APARECIDA.COM.BR/sistema/EAD/DEFAULT.ASP'",
+      "href": null,
+      "class": "module-card"
+    },
+    {
+      "modulo": "Matrícula",
+      "texto_completo": "Matrícula",
+      "onclick": "window.location.href='https://GEMUL-APARECIDA.COM.BR/gemul2015/Sistema/MAT/DEFAULT.ASP'",
+      "href": null,
+      "class": "module-card"
+    },
+    {
+      "modulo": "Planejamento",
+      "texto_completo": "Planejamento",
+      "onclick": "window.location.href='https://GEMUL-APARECIDA.COM.BR/app/planejamento.asp'",
+      "href": null,
+      "class": "module-card"
+    },
+    {
+      "modulo": "Recursos Humanos",
+      "texto_completo": "Recursos Humanos",
+      "onclick": "window.location.href='https://GEMUL-APARECIDA.COM.BR/sistema/SRH/default.asp'",
+      "href": null,
+      "class": "module-card"
+    }
+  ],
+  "cookies": [
+    {
+      "name": "ASPSESSIONIDSGTSDDBQ",
+      "domain": "gemul-aparecida.com.br",
+      "path": "/"
+    },
+    {
+      "name": "usuarioLoginGEMUL",
+      "domain": "gemul-aparecida.com.br",
+      "path": "/"
+    }
+  ]
+}

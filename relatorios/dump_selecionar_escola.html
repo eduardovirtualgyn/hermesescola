@@ -1,0 +1,457 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Painel de Seleção de Escola e Módulos</title><link rel="stylesheet" href="css/selecionar_escola.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-…" crossorigin="anonymous" referrerpolicy="no-referrer"><style>
+	.combo-container {
+		position: relative;
+		width: 100%;
+		max-width: 100%;
+	}
+
+	#comboEmpresaInput {
+		width: 100%;
+		padding: 10px 12px;
+		border-radius: 6px;
+		border: 1px solid #ccc;
+		font-size: 15px;
+	}
+
+	.combo-dropdown {
+		position: absolute;
+		top: 105%;
+		left: 0;
+		right: 0;
+		max-height: 350px;
+		overflow-y: auto;
+		background: white;
+		border: 1px solid #ddd;
+		border-radius: 6px;
+		box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+		display: none;
+		z-index: 9999;
+	}
+
+	.combo-item {
+		padding: 10px 12px;
+		cursor: pointer;
+		font-size: 14px;
+	}
+
+	.combo-item:hover {
+		background-color: #f1f5f9;
+	}
+
+	.combo-item.selected {
+		background-color: #e5f0ff;
+		font-weight: 600;
+	}	
+	</style><script>
+		function abrirComboEmpresa() {
+			document.getElementById("comboEmpresaDropdown").style.display = "block";
+		}
+
+		function fecharComboEmpresa() {
+			document.getElementById("comboEmpresaDropdown").style.display = "none";
+		}
+
+		function selecionarEmpresa(valor, texto) {
+
+			const inputTexto = document.getElementById("comboEmpresaInput");
+			const hidden     = document.getElementById("cmdEmpresaUsuario");
+
+			if (!inputTexto || !hidden) {
+				alert("Erro interno: campos do combo não encontrados na página.");
+				return;
+			}
+
+			inputTexto.value = texto;
+			hidden.value = valor;
+
+			// Remove seleção anterior
+			const itens = document.getElementsByClassName("combo-item");
+			for (let i = 0; i < itens.length; i++) {
+				itens[i].classList.remove("selected");
+			}
+
+			// Marca o item atual
+			for (let i = 0; i < itens.length; i++) {
+				if (itens[i].getAttribute("data-value") == valor) {
+					itens[i].classList.add("selected");
+					break;
+				}
+			}
+
+			fecharComboEmpresa();
+
+			// Submete o form
+			document.getElementById("frm").submit();
+		}
+
+
+		function filtrarComboEmpresa() {
+			const filtro = document.getElementById("comboEmpresaInput").value.toUpperCase();
+			const itens = document.getElementsByClassName("combo-item");
+
+			let algumVisivel = false;
+
+			for (let i = 0; i < itens.length; i++) {
+				const txt = itens[i].innerText.toUpperCase();
+
+				if (txt.indexOf(filtro) > -1) {
+					itens[i].style.display = "";
+					algumVisivel = true;
+				} else {
+					itens[i].style.display = "none";
+				}
+			}
+
+			document.getElementById("comboEmpresaDropdown").style.display = "block";
+		}
+
+		// Fecha ao clicar fora
+		document.addEventListener("click", function(event) {
+			const combo = document.querySelector(".combo-container");
+			if (!combo.contains(event.target)) {
+				fecharComboEmpresa();
+			}
+		});
+
+		document.addEventListener("DOMContentLoaded", function() {
+
+			const hidden = document.getElementById("cmdEmpresaUsuario");
+			const input  = document.getElementById("comboEmpresaInput");
+			const itens  = document.getElementsByClassName("combo-item");
+
+			if (!hidden || !input) return;
+
+			const valorAtual = hidden.value;
+
+			for (let i = 0; i < itens.length; i++) {
+				if (itens[i].getAttribute("data-value") == valorAtual) {
+
+					// Marca visualmente
+					itens[i].classList.add("selected");
+
+					// Coloca o TEXTO no input
+					input.value = itens[i].textContent.trim();
+
+					// (Opcional) rola até ele
+					itens[i].scrollIntoView({ block: "nearest" });
+
+					break;
+				}
+			}
+
+		});	
+
+	</script><script>
+		function abreAtividade(atv_pai, cod_aluno){
+			var caminho = "EAD/respostaAtividadeVisualizar_aluno_cad.asp?atv_pai="+atv_pai+"&a="+cod_aluno;
+			window.open(caminho,"abreAtividade","top=5,left=5,height=810,width=1000,menubar=no,toolbar=no,scrollbars=yes,status=yes");
+		}
+		function fecharNotificacao(atv_aluno, cod_aluno){
+			var frm = document.getElementById("frm");
+			frm.action="fecharNotificacao_cod.asp?atv_aluno="+atv_aluno+"&a="+cod_aluno;
+			frm.submit();
+		}
+		function mostraAtividade(codigo){
+			if (document.getElementById("aluno_"+codigo).style.display=="none"){
+				document.getElementById("aluno_"+codigo).style.display="table-row"
+				document.getElementById("imgDadosAluno_"+codigo).src="http://gemul-aparecida.com.br/images/down.jpg"
+			}
+			else{
+				document.getElementById("aluno_"+codigo).style.display="none"
+				document.getElementById("imgDadosAluno_"+codigo).src="http://gemul-aparecida.com.br/images/up.jpg"
+			}
+		}
+		function mostraTodasNotificacoes(){
+			var frm = document.getElementById("frm");
+			frm.cmdNotificacao.value = "AGUARDE...";
+			frm.cmdNotificacao.disabled = true;
+			frm.action="selecionar_escola.asp?m=s"
+			frm.submit();
+		}
+		
+		function fecharNotificacaoSelecionadas(){
+			var frm = document.getElementById("frm");
+			
+			var selecionado = "N";
+			
+			for (var i = 0; i < frm.elements.length; i++) {
+				if (frm.elements[i].type == "checkbox"){				
+					if (frm.elements[i].checked == true)
+					{
+						selecionado = "S";
+					}
+				}
+			}
+			
+			if (selecionado == "N"){
+				alert("Um ou mais notificações de alunos deverão ser selecionadas!\nMarque a caixa de seleção [ ] que está em frente o nome do aluno.");
+				return false
+			}
+			
+			if (confirm("Deseja fechar todas notificações selecionadas?")){
+				frm.action="fecharNotificacao_cod.asp";
+				frm.submit();
+			}
+		}
+	</script><style>
+		/* Estilo base do alerta */
+		.alerta {
+			padding: 15px 20px;
+			border-radius: 5px;
+			margin: 20px 0;
+			font-family: Arial, sans-serif;
+			font-size: 1.1em;
+			font-weight: bold;
+			display: flex;
+			align-items: center;
+			border-left: 6px solid #f0ad4e; /* barra de destaque */
+			background-color: #fff3cd;       /* fundo amarelo */
+			color: #856404;                  /* texto escuro */
+			box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+		}
+
+		/* Ícone opcional */
+		.alerta .icone {
+			margin-right: 10px;
+			font-size: 1.5em;
+		}
+
+		/* Cores alternativas */
+		.alerta.sucesso {
+			background-color: #d4edda;
+			color: #155724;
+			border-left-color: #28a745;
+		}
+
+		.alerta.erro {
+			background-color: #f8d7da;
+			color: #721c24;
+			border-left-color: #dc3545;
+		}
+
+		.alerta.info {
+			background-color: #d1ecf1;
+			color: #0c5460;
+			border-left-color: #17a2b8;
+		}
+
+		/* Animação de fade-in */
+		@keyframes fadeIn {
+			from { opacity: 0; transform: translateY(-10px); }
+			to { opacity: 1; transform: translateY(0); }
+		}
+
+		.alerta {
+			animation: fadeIn 0.5s ease-in-out;
+		}
+		</style></head>
+    
+    
+     <!-- Se tiver CSS global -->
+	
+<!-- CSS COMBO COM FILTRO -->
+	
+	<!-- FIM CSS COMBO COM FILTRO -->
+
+	<!-- SCRIPT COMBO COM FILTRO -->
+	
+	<!-- FIM SCRIPT COMBO COM FILTRO -->	
+	
+	
+	
+
+<body>
+
+    <!-- Top-bar -->
+    <div class="top-bar">
+        <div class="logos">
+			<img src="img/logomarca-topo-aparecida.png" alt="Prefeitura de Aparecida de Goiânia">
+        </div>
+        <div class="actions">
+			<img class="logo-cabecario" src="img/logo-login.png" alt="GEMUL">
+			
+<a class="whatsapp-float" href="https://api.whatsapp.com/send?1=pt_BR&amp;phone=5562995393297" rel="noopener" title="Falar no WhatsApp do Suporte SEMED" target="_blank">
+				<svg width="25" height="25" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="32" cy="32" r="32" fill="#25D366"></circle>
+				<path d="M11.375 52.625L14.2745 42.0323C12.4853 38.9317 11.5452 35.4169 11.5469
+				31.8127C11.552 20.5445 20.7216 11.375 31.988 11.375C37.4553 11.3767 42.5875 13.5062 46.4478 17.37C50.3064
+				21.2337 52.4308 26.3694 52.4291 31.8316C52.4239 43.1014 43.2544 52.2709 31.988 52.2709C28.5677 52.2692 25.1972
+				51.4116 22.2117 49.7822L11.375 52.625ZM22.7136 46.0817C25.5942 47.7919 28.3442 48.8162 31.9811 48.818C41.3448 48.818
+				48.9727 41.197 48.9778 31.8281C48.9813 22.4403 41.3895 14.8297 31.9948 14.8262C22.6242 14.8262 15.0016 22.4472 14.9981
+				31.8144C14.9964 35.6386 16.117 38.502 17.9991 41.4978L16.282 47.7678L22.7136 46.0817ZM42.285 36.6905C42.1578 36.4773
+				 41.8175 36.3502 41.3053 36.0941C40.7948 35.838 38.2837 34.6022 37.8145 34.432C37.347 34.2619 37.0067 34.1759 36.6647
+				 34.6881C36.3244 35.1986 35.3447 36.3502 35.0473 36.6905C34.75 37.0308 34.4509 37.0738 33.9405 36.8177C33.43 36.5616 31.7834
+				 36.0236 29.8327 34.2825C28.315 32.9281 27.2889 31.2558 26.9916 30.7436C26.6942 30.2331 26.9606 29.9564 27.215
+				 29.702C27.4453 29.4734 27.7255 29.1056 27.9816 28.8066C28.2411 28.5109 28.3253 28.2978 28.4972 27.9558C28.6673
+				 27.6155 28.5831 27.3164 28.4542 27.0603C28.3253 26.8059 27.3044 24.2914 26.8798 23.2688C26.4639 22.2736 26.0428
+				 22.4077 25.73 22.3922L24.7503 22.375C24.41 22.375 23.8566 22.5022 23.3891 23.0144C22.9216 23.5266 21.6016 24.7606
+				 21.6016 27.2752C21.6016 29.7897 23.432 32.2183 23.6864 32.5586C23.9425 32.8989 27.2872 38.0586 32.4108 40.2706C33.6294
+				 40.7966 34.5816 41.1111 35.3223 41.3466C36.5461 41.735 37.6598 41.68 38.5398 41.5494C39.5212 41.4033 41.5614 40.3136
+				 41.9877 39.1208C42.4139 37.9262 42.4139 36.9036 42.285 36.6905Z" fill="white"></path></svg>
+
+					<span class="topo-semed">
+						<small>Suporte</small>
+						<strong>SME</strong>
+					</span>				 
+			</a>			
+			
+			<a class="whatsapp-float" href="https://api.whatsapp.com/send?1=pt_BR&amp;phone=556235872362" rel="noopener" title="Falar no WhatsApp do Suporte GEMUL" target="_blank">
+			<svg width="25" height="25" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+			<circle cx="32" cy="32" r="32" fill="#25D366"></circle>
+			<path d="M11.375 52.625L14.2745 42.0323C12.4853 38.9317 11.5452 35.4169 11.5469
+			31.8127C11.552 20.5445 20.7216 11.375 31.988 11.375C37.4553 11.3767 42.5875 13.5062 46.4478 17.37C50.3064
+			21.2337 52.4308 26.3694 52.4291 31.8316C52.4239 43.1014 43.2544 52.2709 31.988 52.2709C28.5677 52.2692 25.1972
+			51.4116 22.2117 49.7822L11.375 52.625ZM22.7136 46.0817C25.5942 47.7919 28.3442 48.8162 31.9811 48.818C41.3448 48.818
+			48.9727 41.197 48.9778 31.8281C48.9813 22.4403 41.3895 14.8297 31.9948 14.8262C22.6242 14.8262 15.0016 22.4472 14.9981
+			31.8144C14.9964 35.6386 16.117 38.502 17.9991 41.4978L16.282 47.7678L22.7136 46.0817ZM42.285 36.6905C42.1578 36.4773
+			 41.8175 36.3502 41.3053 36.0941C40.7948 35.838 38.2837 34.6022 37.8145 34.432C37.347 34.2619 37.0067 34.1759 36.6647
+			 34.6881C36.3244 35.1986 35.3447 36.3502 35.0473 36.6905C34.75 37.0308 34.4509 37.0738 33.9405 36.8177C33.43 36.5616 31.7834
+			 36.0236 29.8327 34.2825C28.315 32.9281 27.2889 31.2558 26.9916 30.7436C26.6942 30.2331 26.9606 29.9564 27.215
+			 29.702C27.4453 29.4734 27.7255 29.1056 27.9816 28.8066C28.2411 28.5109 28.3253 28.2978 28.4972 27.9558C28.6673
+			 27.6155 28.5831 27.3164 28.4542 27.0603C28.3253 26.8059 27.3044 24.2914 26.8798 23.2688C26.4639 22.2736 26.0428
+			 22.4077 25.73 22.3922L24.7503 22.375C24.41 22.375 23.8566 22.5022 23.3891 23.0144C22.9216 23.5266 21.6016 24.7606
+			 21.6016 27.2752C21.6016 29.7897 23.432 32.2183 23.6864 32.5586C23.9425 32.8989 27.2872 38.0586 32.4108 40.2706C33.6294
+			 40.7966 34.5816 41.1111 35.3223 41.3466C36.5461 41.735 37.6598 41.68 38.5398 41.5494C39.5212 41.4033 41.5614 40.3136
+			 41.9877 39.1208C42.4139 37.9262 42.4139 36.9036 42.285 36.6905Z" fill="white"></path></svg><span class="topo-suporte">GEMUL</span></a>
+			
+			<div class="user-menu">
+				<i class="fa-solid fa-user-circle user-icon"></i>
+				<span class="user-name">Usuário</span>
+
+				<div class="dropdown">
+					<a href="alterar-senha.asp"><i class="fa-solid fa-key"></i> Alterar Senha</a>
+					<a href="index.asp"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+				</div>
+			</div>
+        </div>
+    </div>
+
+
+	
+    <form name="frm" method="post" id="frm" action="selecionar_escola.asp">	
+	<input type="hidden" name="UsuarioWeb" id="UsuarioWeb" value="EDUARDO.RODRIGUES">
+	
+     <div class="container content">
+    	
+        <div class="panel panel-grey">
+			
+			<!-- Outros tipos de alerta -->
+			<!--div class="alerta">
+				<span class="icone">⚠️</span>
+				<span>Sistema está em manutenção!</span>
+			</div>
+
+			
+			<div class="alerta sucesso">
+				<span class="icone">✅</span>
+				<span>Operação realizada com sucesso!</span>
+			</div>
+
+			<div class="alerta erro">
+				<span class="icone">❌</span>
+				<span>Ocorreu um erro ao processar.</span>
+			</div>
+
+			<div class="alerta info">
+				<span class="icone">ℹ️</span>
+				<span>Informação importante para o usuário.</span>
+			</div-->
+			
+			
+			
+			
+			
+    	
+
+    <!-- Corpo -->
+    <div class="main-content">
+        <style>
+  .btn_notificacao {
+    padding: 4px 4px;  /* altura e largura ajustáveis */
+    background: #165fa2;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: 0.2s;
+    width: auto;         /* Importante para não ocupar toda a linha */
+}
+</style>
+
+
+<div class="school-select">
+    <h3><i class="fa-solid fa-magnifying-glass"></i> Selecione sua unidade</h3><br>
+
+    <div class="combo-container">
+		<input type="text" id="comboEmpresaInput" name="comboEmpresaInput" placeholder="Digite para pesquisar a unidade..." autocomplete="off" onclick="abrirComboEmpresa()" onkeyup="filtrarComboEmpresa()">
+
+        <input type="hidden" name="cmdEmpresaUsuario" id="cmdEmpresaUsuario" value="0">
+
+        <div id="comboEmpresaDropdown" class="combo-dropdown">
+
+            <div class="combo-item" onclick="selecionarEmpresa('0', 'Selecione...')">
+                Selecione...
+            </div>
+
+            
+                <div class="combo-item" data-value="31" onclick="selecionarEmpresa('31', 'ESCOLA MUNICIPAL CIDADE SATÉLITE SÃO LUIZ')">
+                    ESCOLA MUNICIPAL CIDADE SATÉLITE SÃO LUIZ
+                </div>
+            
+                <div class="combo-item" data-value="68" onclick="selecionarEmpresa('68', 'ESCOLA MUNICIPAL SENADOR ALBINO G. BOAVENTURA')">
+                    ESCOLA MUNICIPAL SENADOR ALBINO G. BOAVENTURA
+                </div>
+            
+
+        </div>
+    </div>
+</div>
+
+
+        <!-- Painel Modulos -->
+		
+
+
+    </div>
+	<input type="hidden" name="qtde_contratos" id="qtde_contratos" value="0">
+	<input type="hidden" name="m" id="m" value="">
+	
+	
+	<!-- Painel Notificação 1 -->
+    
+    
+     <!-- Painel Notificação 2 --> 
+    
+	
+	<!-- Rodapé fixo -->
+	<footer class="footer-fixed" role="contentinfo">
+		<div class="footer-left">
+			<span>© App GEMUL | Usuário: EDUARDO RODRIGUES GONÇALVES</span>
+		</div>
+
+		<div class="footer-right">
+			<ul>
+				<li class="rodape-ajuda"><a href="https://api.whatsapp.com/send?1=pt_BR&amp;phone=556235872362" target="_blank">Ajuda</a></li>
+				<li><a href="https://api.whatsapp.com/send?1=pt_BR&amp;phone=556235872362" target="_blank"><i class="fa-regular fa-circle-question"></i></a></li>
+			</ul>
+		</div>
+	</footer>
+
+
+    <!-- Script para combobox pesquisável -->
+    <script>
+        const select = document.getElementById('school');
+        select.addEventListener('input', function() {
+            const filter = this.value.toLowerCase();
+            Array.from(this.options).forEach(option => {
+                option.style.display = option.text.toLowerCase().includes(filter) ? '' : 'none';
+            });
+        });
+    </script>
+
+
+
+</div></div></form></body></html>

@@ -30,6 +30,7 @@ Este catálogo registra os documentos institucionais, normativos, técnicos e op
 | `DOC-PED-001` | Matriz Curricular Municipal de Aparecida | SME | Vigente | Habilidades e competências prioritárias por ano/ciclo. |
 | `DOC-PED-002` | Diretrizes do CNCA (Compromisso Criança Alfabetizada) | MEC / SME | Vigente | Metas e práticas de alfabetização na idade certa. |
 | `DOC-PED-003` | Resultados SAEGO / CAEd | CAEd / SME | Análise Periódica | Diagnóstico de proficiência em Língua Portuguesa e Matemática. |
+| `DOC-PED-004` | Diagnóstico e Mapeamento: Plataforma Bem Comum (PARC/CAEd) | CAEd / Bem Comum | Integrado (2026) | Mapeamento dos instrumentos de Fluência em Leitura e Avaliação Oral de Matemática da E.M. Senador Albino G. Boaventura. |
 
 ---
 
@@ -63,6 +64,7 @@ Este catálogo registra os documentos institucionais, normativos, técnicos e op
 | `SYS-001` | **GEMUL Aparecida** | `https://gemul-aparecida.com.br/login/index.asp` | ASP Clássico (Form POST) | Matrículas, turmas, notas, faltas e movimentação. |
 | `SYS-002` | **CNCA (CAEd Digital)** | `https://criancaalfabetizada.caeddigital.net/#!/login` | CAEd SPA (AngularJS) | Alfabetização e letramento (1º e 2º anos). |
 | `SYS-003` | **SAEGO (CAEd Digital)** | `https://avaliacaoemonitoramentogoias.caeddigital.net/#!/login` | CAEd SPA (Avaliação) | Diagnóstico e proficiências em Língua Portuguesa e Matemática. |
-| `SYS-004` | **Bem Comum / PARC** | `https://bemcomum.caeddigital.net/` | CAEd SPA (Parcerias) | Avaliação diagnóstica em Regime de Colaboração. |
+| `SYS-004` | **Bem Comum / PARC** | `https://bemcomum.caeddigital.net/` | CAEd SPA (AngularJS) | [Autenticado e Integrado] Avaliação da fluência em leitura e matemática oral. |
 | `SYS-005` | **SIAM SEDUC-GO** | `https://siam.educacao.go.gov.br/login` | Vite SPA (Modern Web) | Administração integrada e recursos humanos. |
 | `SYS-006` | **Scrapling Crawler Suite** | `agentes/tecnologia-automacao/portal_crawler.py` | Python / Scrapling | Motor unificado de extração, login e parsing tabular dos 5 portais. |
+| `SYS-007` | **Extrator CAEd / Bem Comum** | `agentes/tecnologia-automacao/crawler_caed.py` | Playwright / Headless | Módulo de autenticação, captura de tokens JWT e raspagem dos relatórios PARC. |

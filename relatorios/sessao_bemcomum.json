@@ -1,0 +1,156 @@
+{
+  "usuario": "92937934153",
+  "url_pos_login": "https://bemcomum.caeddigital.net/#!/minhapagina",
+  "titulo": "Plataforma PARC",
+  "local_storage": {
+    "168-parc.entidade": "{\"E_1308_ESCOLA\":{\"CD_REDE\":\"13081680200000002\"},\"E_1308_CONTROLE_EXECUCAO\":{\"FL_SITUACAO_ATIVIDADE\":\"0\",\"TP_ATIVIDADE\":null}}",
+    "168-parc.PROVIDERS_CONFIG": "[{\"NM_PROVIDER\":\"password\",\"CD_PARAM_KEY\":[\"RECUPERAR_SENHA\",\"CAED_AVALIACAO\",\"LEITOR_CARTAO\",\"FLUENCIA\"],\"CD_PARAM_VALUE\":[false,\"1005\",\"1005\",\"1005\"]}]",
+    "168-parc.hierarquia": "{\"CD_AGREGADO\":\"52090604\",\"NM_AGREGADO\":\"ESCOLA MUNICIPAL SENADOR ALBINO G BOAVENTURA\",\"CD_PAIS\":\"01058\",\"CD_ESTADO\":\"52\",\"NM_ESTADO\":\"GOIÁS\",\"CD_REGIONAL\":\"13330100000102\",\"NM_REGIONAL\":\"COORD REG DE EDUCACAO DE APARECIDA DE GOIANIA\",\"CD_MUNICIPIO\":\"5201405\",\"NM_MUNICIPIO\":\"APARECIDA DE GOIANIA\",\"CD_ESCOLA\":\"52090604\",\"NM_ESCOLA\":\"ESCOLA MUNICIPAL SENADOR ALBINO G BOAVENTURA\"}",
+    "Parse/portal/installationId": "82692614-56d3-4a42-8591-8ff60983d22a",
+    "168-parc.LOGIN_PROVIDER": "\"password\"",
+    "168-parc.perfil": "{\"id\":\"1021\",\"nome\":\"Diretor(a) Escolar\",\"agregados\":[{\"id\":\"52090604\",\"nome\":\"ESCOLA MUNICIPAL SENADOR ALBINO G BOAVENTURA\",\"tipo\":\"ESCOLA\",\"nivel\":\"5\",\"hierarquia\":{\"CD_AGREGADO\":\"52090604\",\"NM_AGREGADO\":\"ESCOLA MUNICIPAL SENADOR ALBINO G BOAVENTURA\",\"CD_PAIS\":\"01058\",\"CD_ESTADO\":\"52\",\"NM_ESTADO\":\"GOIÁS\",\"CD_REGIONAL\":\"13330100000102\",\"NM_REGIONAL\":\"COORD REG DE EDUCACAO DE APARECIDA DE GOIANIA\",\"CD_MUNICIPIO\":\"5201405\",\"NM_MUNICIPIO\":\"APARECIDA DE GOIANIA\",\"CD_ESCOLA\":\"52090604\",\"NM_ESCOLA\":\"ESCOLA MUNICIPAL SENADOR ALBINO G BOAVENTURA\"}}],\"tipoAgregado\":\"ESCOLA\",\"layoutsEntidade\":null,\"podeAlterarSenha\":true,\"entidade\":{\"E_1308_ESCOLA\":{\"CD_REDE\":\"13081680200000002\"},\"E_1308_CONTROLE_EXECUCAO\":{\"FL_SITUACAO_ATIVIDADE\":\"0\",\"TP_ATIVIDADE\":null}}}",
+    "168-parc.usuario": "{\"sessionToken\":\"r:286b53c2311a3adaa62bcc63f548bb03\",\"login\":\"92937934153\",\"id\":\"ThNcd0PnBI\",\"cpf\":\"92937934153\",\"master\":false,\"nome\":\"EDUARDO RODRIGUES GONCALVES\",\"perfis\":[{\"id\":\"1021\",\"nome\":\"Diretor(a) Escolar\",\"agregados\":[{\"id\":\"52090604\",\"nome\":\"ESCOLA MUNICIPAL SENADOR ALBINO G BOAVENTURA\",\"tipo\":\"ESCOLA\",\"nivel\":\"5\",\"hierarquia\":{\"CD_AGREGADO\":\"52090604\",\"NM_AGREGADO\":\"ESCOLA MUNICIPAL SENADOR ALBINO G BOAVENTURA\",\"CD_PAIS\":\"01058\",\"CD_ESTADO\":\"52\",\"NM_ESTADO\":\"GOIÁS\",\"CD_REGIONAL\":\"13330100000102\",\"NM_REGIONAL\":\"COORD REG DE EDUCACAO DE APARECIDA DE GOIANIA\",\"CD_MUNICIPIO\":\"5201405\",\"NM_MUNICIPIO\":\"APARECIDA DE GOIANIA\",\"CD_ESCOLA\":\"52090604\",\"NM_ESCOLA\":\"ESCOLA MUNICIPAL SENADOR ALBINO G BOAVENTURA\"}}],\"tipoAgregado\":\"ESCOLA\",\"layoutsEntidade\":null,\"podeAlterarSenha\":true,\"entidade\":{\"E_1308_ESCOLA\":{\"CD_REDE\":\"13081680200000002\"},\"E_1308_CONTROLE_EXECUCAO\":{\"FL_SITUACAO_ATIVIDADE\":\"0\",\"TP_ATIVIDADE\":null}}}],\"autenticado\":true}",
+    "168-parc.agregado": "{\"id\":\"52090604\",\"nome\":\"ESCOLA MUNICIPAL SENADOR ALBINO G BOAVENTURA\",\"tipo\":\"ESCOLA\",\"nivel\":\"5\",\"hierarquia\":{\"CD_AGREGADO\":\"52090604\",\"NM_AGREGADO\":\"ESCOLA MUNICIPAL SENADOR ALBINO G BOAVENTURA\",\"CD_PAIS\":\"01058\",\"CD_ESTADO\":\"52\",\"NM_ESTADO\":\"GOIÁS\",\"CD_REGIONAL\":\"13330100000102\",\"NM_REGIONAL\":\"COORD REG DE EDUCACAO DE APARECIDA DE GOIANIA\",\"CD_MUNICIPIO\":\"5201405\",\"NM_MUNICIPIO\":\"APARECIDA DE GOIANIA\",\"CD_ESCOLA\":\"52090604\",\"NM_ESCOLA\":\"ESCOLA MUNICIPAL SENADOR ALBINO G BOAVENTURA\"}}",
+    "Parse/portal/currentUser": "{\"authData\":{\"caed_partner\":{\"_id\":\"92937934153\"}},\"createdAt\":\"2021-10-04T08:15:21.987Z\",\"updatedAt\":\"2024-02-16T16:37:53.723Z\",\"cpf\":\"92937934153\",\"email\":\"eduardovirtualgyn@gmail.com\",\"executionId\":\"ARQ_US_185_X_1308_20240219085546_000000000\",\"sequenceNumber\":1026,\"username\":\"92937934153\",\"__type\":\"Object\",\"className\":\"_User\",\"sessionToken\":\"r:286b53c2311a3adaa62bcc63f548bb03\",\"objectId\":\"G7GH7h0LCD\"}"
+  },
+  "session_storage": {},
+  "cookies": [
+    {
+      "name": "_ga",
+      "value": "GA1.1.1051911079.1793510886",
+      "domain": ".caeddigital.net",
+      "path": "/",
+      "expires": 1828070885.625732,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_VW15T3CQLY",
+      "value": "GS2.1.s1793510885$o1$g0$t1793510886$j59$l0$h0",
+      "domain": ".caeddigital.net",
+      "path": "/",
+      "expires": 1828070886.943606,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "menus": [
+    "menu -> button",
+    "INÍCIO -> #!/pagina-inicial",
+    "FALE CONOSCO -> #!/contato",
+    "Trocar Perfil -> #!/login",
+    "Alterar Senha -> #!/alterar-senha",
+    "Editar Usuario -> #!/edicao-usuario",
+    "Encerrar simulação -> #!/pagina-inicial",
+    "Sair -> #!/pagina-inicial",
+    "ENTRAR -> #!/login",
+    "MINHA PÁGINA -> #!/minhapagina",
+    "home -> #!/minhapagina",
+    "login -> #!/login",
+    "Email -> mailto:suporte.bemcomum@caedufjf.net",
+    "Chat -> http://www.chat.caed.ufjf.br/chatUserIndex.php?projeto=147",
+    "arrow_upward -> button"
+  ],
+  "apis_capturadas": [
+    {
+      "url": "https://bemcomum.caeddigital.net/portal/functions/login",
+      "status": 200,
+      "data": {
+        "result": {
+          "sessionToken": "r:286b53c2311a3adaa62bcc63f548bb03",
+          "login": "92937934153",
+          "id": "ThNcd0PnBI",
+          "cpf": "92937934153",
+          "master": false,
+          "nome": "EDUARDO RODRIGUES GONCALVES",
+          "perfis": [
+            {
+              "id": "1021",
+              "nome": "Diretor(a) Escolar",
+              "agregados": [
+                {
+                  "id": "52090604",
+                  "nome": "ESCOLA MUNICIPAL SENADOR ALBINO G BOAVENTURA",
+                  "tipo": "ESCOLA",
+                  "nivel": "5",
+                  "hierarquia": {
+                    "CD_AGREGADO": "52090604",
+                    "NM_AGREGADO": "ESCOLA MUNICIPAL SENADOR ALBINO G BOAVENTURA",
+                    "CD_PAIS": "01058",
+                    "CD_ESTADO": "52",
+                    "NM_ESTADO": "GOIÁS",
+                    "CD_REGIONAL": "13330100000102",
+                    "NM_REGIONAL": "COORD REG DE EDUCACAO DE APARECIDA DE GOIANIA",
+                    "CD_MUNICIPIO": "5201405",
+                    "NM_MUNICIPIO": "APARECIDA DE GOIANIA",
+                    "CD_ESCOLA": "52090604",
+                    "NM_ESCOLA": "ESCOLA MUNICIPAL SENADOR ALBINO G BOAVENTURA"
+                  }
+                }
+              ],
+              "tipoAgregado": "ESCOLA",
+              "layoutsEntidade": null,
+              "podeAlterarSenha": true,
+              "entidade": {
+                "E_1308_ESCOLA": {
+                  "CD_REDE": "13081680200000002"
+                },
+                "E_1308_CONTROLE_EXECUCAO": {
+                  "FL_SITUACAO_ATIVIDADE": "0",
+                  "TP_ATIVIDADE": null
+                }
+              }
+            }
+          ],
+          "autenticado": true
+        }
+      }
+    }
+  ],
+  "linhas_texto": [
+    "INÍCIO",
+    "FALE CONOSCO",
+    "EDUARDO RODRIGUES GONCALVES",
+    "MINHA PÁGINA",
+    "Plataforma BEM COMUM",
+    "1 de Novembro",
+    "Todos",
+    "Avaliações da Fluência",
+    "Avaliações Orais de Matemática",
+    "Dados administrativos",
+    "Desenvolvimento Profissional",
+    "Avaliações da fluência em leitura",
+    "As avaliações da fluência em leitura permitem identificar o nível de fluência em que cada estudante se encontra de modo que sejam desenvolvidas ações que consolidem seu processo de alfabetização.",
+    "Organização",
+    "Acesse materiais e recursos necessários para planejar, aplicar e registrar as avaliações.",
+    "Organização",
+    "Avaliações Orais de Matemática",
+    "As avaliações da orais de Matemática permitem avaliar o desenvolvimento de importantes habilidades matemáticas, que deveriam estar consolidadas até o final do 1º ano do Ensino Fundamental.",
+    "Organização",
+    "Acesse materiais e recursos necessários para planejar, organizar e registrar a aplicação.",
+    "Organização",
+    "Acompanhamento",
+    "Monitore a sincronização dos áudios da Avaliação Oral de Matemática, de forma a maximizar o diagnóstico da aplicação.",
+    "Acompanhamento",
+    "Dados administrativos",
+    "Verifique os dados administrativos para auxiliar o planejamento das avaliações.",
+    "Escolas",
+    "Visualize as instituições de ensino cadastradas na plataforma.",
+    "Escolas",
+    "Profissionais",
+    "Consulte e cadastre profissionais para realizarem as ações previstas.",
+    "Profissionais",
+    "Desenvolvimento Profissional",
+    "Consulta a materiais pedagógicos e acesso a itinerários formativos.",
+    "Boas práticas",
+    "Utilize as ações pedagógicas propostas para superar as dificuldades evidenciadas pelas avaliações.",
+    "Boas práticas",
+    "SUPORTE TÉCNICO",
+    "De segunda a sexta-feira, das 8h30 às 18h30",
+    "Email",
+    "Chat",
+    "COPYRIGHT * 2024 CAED UFJF ALL RIGHTS RESERVED."
+  ]
+}

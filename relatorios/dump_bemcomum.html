@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="pt" ng-app="app" class="no-js"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Plataforma PARC</title>
+    <meta name="description" content="Plataforma PARC">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/resources/images/favicon.png">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="node_modules/isteven-angular-multiselect/isteven-multi-select.css" rel="stylesheet">
+    <link href="node_modules/angular-ui-notification/dist/angular-ui-notification.min.css" rel="stylesheet">
+    <link href="node_modules/pickadate/lib/compressed/themes/classic.css" rel="stylesheet">
+    <link href="node_modules/pickadate/lib/compressed/themes/classic.date.css" rel="stylesheet">
+    <link href="node_modules/ui-select/dist/select.min.css" rel="stylesheet">
+    <link href="node_modules/jsoneditor/dist/jsoneditor.min.css" rel="stylesheet">
+    <link href="node_modules/codemirror/lib/codemirror.css" rel="stylesheet">
+    <link href="node_modules/codemirror/addon/hint/show-hint.css" rel="stylesheet">
+    <link href="libs/css/all.min.css" rel="stylesheet">
+    <link href="libs/css/owlcarousel/owl.carousel.min.css" rel="stylesheet">
+    <link href="libs/css/owlcarousel/owl.theme.default.min.css" rel="stylesheet">
+    <!-- <link href="resources/css/external/app.css" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href="resources/css/external/interpreter.css" rel="stylesheet">
+    <link href="resources/css/external/caed-form-parse.css" rel="stylesheet">
+    <link href="resources/css/external/caed-objeto.css" rel="stylesheet">
+    <link href="resources/css/external/caed-resultados.css" rel="stylesheet">
+    <link rel="manifest" href="manifest.webmanifest">
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/wordcloud.js"></script>
+
+    <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_HTMLorMMLs"></script>
+    <link href="resources/css/app.css" rel="stylesheet">
+    <link rel="manifest" href="manifest.webmanifest">
+
+    <script>
+        MathJax.Ajax.config.path["mhchem"] = "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
+        MathJax.Hub.Config({
+            showMathMenu: false,
+            TeX: {
+                extensions: ["[mhchem]/mhchem.js"]
+            },
+            messageStyle: "none",
+            tex2jax: {
+                preview: "none"
+            },
+            MathML: {
+                extensions: ["mml3.js", "content-mathml.js"]
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+    <ui-view></ui-view>
+
+
+    <!-- Bibliotecas de uso geral  -->
+    <!-- nodeModules:js -->
+    <script src="node_modules.min.js?v=1791923637489"></script></body></html>

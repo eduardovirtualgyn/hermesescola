@@ -1,0 +1,62 @@
+{
+  "portal": "CNCA - Compromisso Nacional Criança Alfabetizada (CAEd Digital / MEC)",
+  "url_final": "https://criancaalfabetizada.caeddigital.net/#!/login",
+  "titulo": "Criança Alfabetizada - Compromisso Nacional",
+  "usuario": "92937934153",
+  "status": "verificar",
+  "cookies": [
+    {
+      "name": "_ga",
+      "domain": ".caeddigital.net",
+      "path": "/"
+    },
+    {
+      "name": "_ga_H3GEEDLBDC",
+      "domain": ".caeddigital.net",
+      "path": "/"
+    }
+  ],
+  "local_storage_keys": [
+    "Parse/portal/installationId",
+    "225-alfabetizacao.PROVIDERS_CONFIG"
+  ],
+  "local_storage": {
+    "Parse/portal/installationId": "9d4fa14a-8402-44f7-af5f-d5e1302113f9",
+    "225-alfabetizacao.PROVIDERS_CONFIG": "[{\"NM_PROVIDER\":\"password\",\"CD_PARAM_KEY\":[\"CAED_AVALIACAO\",\"RECUPERAR_SENHA\",\"MOBILE.FLUENCIA.PERFIL\",\"MOBILE.FLUENCIA.AGREGADO_UNICO\",\"MOBILE.LEITOR_CARTAO.PERFIL\",\"MOBILE.LEITOR_CARTAO.AGREGADO_UNICO\"],\"CD_PARAM_VALUE\":[\"1005\",\"false\",\"1072\",\"true"
+  },
+  "menus": [
+    "COMPROMISSO NACIONAL DA\nCRIANÇA ALFABETIZADA -> #!/pagina-inicial",
+    "Sobre -> #!/programa",
+    "Apresentaçao -> #!/programa",
+    "Debates -> action",
+    "Novidades -> action",
+    "Trocar Perfil -> #!/login",
+    "Alterar Senha -> #!/alterar-senha",
+    "Editar Usuario -> #!/edicao-usuario",
+    "Encerrar simulação -> #!/pagina-inicial",
+    "Sair -> #!/pagina-inicial",
+    "ENTRAR -> #!/login",
+    "Início -> #!/inicio",
+    "Cadastre-se -> action",
+    "Entrar -> action",
+    "Entrar com gov.br -> action",
+    "Entrar com usuário do CAEd -> action",
+    "Ajuda -> #!/ajuda",
+    "COMPROMISSO NACIONAL DA CRIANÇA ALFABETIZADA -> #!/pagina-inicial"
+  ],
+  "linhas_conteudo": [
+    "COMPROMISSO NACIONAL DA",
+    "CRIANÇA ALFABETIZADA",
+    "ENTRAR",
+    "COMPROMISSO NACIONAL",
+    "CRIANÇA ALFABETIZADA",
+    "Cadastre-se",
+    "Usuário",
+    "Senha",
+    "Entrar",
+    "Entrar com gov.br",
+    "Entrar com usuário do CAEd",
+    "Ajuda",
+    "Usuário ou senha inválidos. Tente novamente."
+  ]
+}

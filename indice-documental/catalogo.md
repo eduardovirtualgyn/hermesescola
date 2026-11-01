@@ -31,6 +31,7 @@ Este catálogo registra os documentos institucionais, normativos, técnicos e op
 | `DOC-PED-002` | Diretrizes do CNCA (Compromisso Criança Alfabetizada) | MEC / SME | Vigente | Metas e práticas de alfabetização na idade certa. |
 | `DOC-PED-003` | Resultados SAEGO / CAEd | CAEd / SME | Análise Periódica | Diagnóstico de proficiência em Língua Portuguesa e Matemática. |
 | `DOC-PED-004` | Diagnóstico e Mapeamento: Plataforma Bem Comum (PARC/CAEd) | CAEd / Bem Comum | Integrado (2026) | Mapeamento dos instrumentos de Fluência em Leitura e Avaliação Oral de Matemática da E.M. Senador Albino G. Boaventura. |
+| `DOC-PED-005` | Diagnóstico e Mapeamento: Portal CNCA (Compromisso Criança Alfabetizada) | MEC / CAEd | Mapeado (2026) | Integração com Gov.br SSO e espelhamento de dados com a plataforma Bem Comum. |
 
 ---
 
@@ -63,7 +64,7 @@ Este catálogo registra os documentos institucionais, normativos, técnicos e op
 | Identificador | Sistema / Portal | URL Oficial | Arquitetura | Finalidade na Escola |
 | :--- | :--- | :--- | :--- | :--- |
 | `SYS-001` | **GEMUL Aparecida** | `https://gemul-aparecida.com.br/login/index.asp` | ASP Clássico (Form POST + Seleção de Unidade) | [Autenticado e Integrado] Matrículas, turmas, notas, faltas, modulação e planejamento. |
-| `SYS-002` | **CNCA (CAEd Digital)** | `https://criancaalfabetizada.caeddigital.net/#!/login` | CAEd SPA (AngularJS) | Alfabetização e letramento (1º e 2º anos). |
+| `SYS-002` | **CNCA (CAEd Digital)** | `https://criancaalfabetizada.caeddigital.net/#!/login` | CAEd SPA (Gov.br SSO) | [Mapeado] Alfabetização e letramento infantil (1º e 2º anos). |
 | `SYS-003` | **SAEGO (CAEd Digital)** | `https://avaliacaoemonitoramentogoias.caeddigital.net/#!/login` | CAEd SPA (Avaliação) | Diagnóstico e proficiências em Língua Portuguesa e Matemática. |
 | `SYS-004` | **Bem Comum / PARC** | `https://bemcomum.caeddigital.net/` | CAEd SPA (AngularJS) | [Autenticado e Integrado] Avaliação da fluência em leitura e matemática oral. |
 | `SYS-005` | **SIAM SEDUC-GO** | `https://siam.educacao.go.gov.br/login` | Vite SPA (Modern Web) | Administração integrada e recursos humanos. |
